@@ -3,7 +3,7 @@ export interface Project {
   number: string;
   title: string;
   subtitle: string;
-  category: 'AI & ML' | 'DATA ANALYSIS' | 'CREATIVE TECH';
+  category: 'CREATIVE TECH' | 'SOFTWARE SYSTEMS';
   description: string;
   longDescription: string;
   technologies: string[];
@@ -11,7 +11,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   isPlaceholderVisual: boolean;
-  visualType: 'cnn-diagram' | 'nlp-matrix' | 'data-distribution';
+  visualType: 'esports-hud' | 'terminal-matrix' | 'socket-network';
   keyHighlights: string[];
 }
 
@@ -61,23 +61,26 @@ export const PORTFOLIO_DATA = {
     countryCode: "IN",
     timezone: "Asia/Kolkata",
     availability: "AVAILABLE FOR INTERESTING OPPORTUNITIES",
-    availabilityStatus: "active", // 'active' | 'limited' | 'busy'
+    availabilityStatus: "active",
     bioIntro: "I'm a Computer Science Engineering student exploring the intersection of technology, competitive gaming, creativity and community building.",
     aboutParagraphs: [
       "I'm Arsh Kasim Sayed, a Computer Science Engineering student at NMAM Institute of Technology, Nitte.",
       "I'm interested in more than just writing code. I enjoy understanding how things work, building projects, exploring technology, competing in esports and bringing people together around shared ideas.",
-      "From experimenting with AI-based projects to managing competitive gaming teams and building a collegiate esports community, I enjoy turning ideas into something tangible.",
+      "From engineering web architectures and network socket systems to managing competitive gaming teams and founding a collegiate esports community, I enjoy turning ideas into something tangible.",
       "I believe the best experiences happen when technology, creativity and execution come together."
     ],
     editorialPullQuote: "The best experiences happen when technology, creativity and execution come together.",
   },
 
   socials: {
-    github: "https://github.com/Simsayed",
+    github: "https://github.com/Arshsayed05",
+    githubUsername: "Arshsayed05",
     linkedin: "https://www.linkedin.com/in/arshsayed/", // Clearly labeled editable placeholder
     instagram: "https://www.instagram.com/arshsayed/", // Clearly labeled editable placeholder
     email: "arshkasimsayed@gmail.com", // Contact email & mailto fallback
-    portfolioRepo: "https://github.com/Simsayed",
+    portfolioRepo: "https://github.com/Arshsayed05/Portfolio",
+    portfolioLive: "https://arshsayeddev.vercel.app",
+    afterHoursLive: "https://afterhoursnmamit.vercel.app",
   },
 
   dimensions: [
@@ -86,22 +89,22 @@ export const PORTFOLIO_DATA = {
       code: "DIMENSION 01",
       title: "THE ENGINEER",
       subtitle: "THINK. BUILD. EXPERIMENT.",
-      description: "My technical journey revolves around computer science, software development, AI and machine learning. I enjoy learning new technologies and turning concepts into working projects.",
-      quote: "Turning conceptual logic and machine learning models into reliable, functional digital systems.",
+      description: "My technical journey revolves around computer science, software development, web engineering, and networking. I enjoy learning new technologies and turning concepts into working projects.",
+      quote: "Turning conceptual logic, network protocols, and frontend architectures into reliable, functional digital systems.",
       coreFocus: [
         "Computer Science Foundations",
-        "Machine Learning & Deep Learning (CNN)",
-        "Software Engineering & Architecture",
-        "Data Analysis & Pattern Discovery",
+        "Frontend & Creative Web Engineering",
+        "Low-Level Socket Programming & TCP/IP",
+        "Object-Oriented Software Architecture",
         "Full-Stack Web Development",
       ],
       technologies: [
-        "Python", "Java", "JavaScript", "Machine Learning", 
-        "CNN (Convolutional Neural Networks)", "MongoDB", "SQL", "Data Analysis", "Web Development"
+        "Python", "Java", "JavaScript", "TypeScript", 
+        "React", "Node.js", "Socket Programming", "SQL", "Tailwind CSS"
       ],
       meta: {
         specLabel: "SYS // COMPUTATION",
-        activeFocus: "Neural Architectures & Application Engineering",
+        activeFocus: "Full-Stack Development & Interactive Systems",
         academicBase: "Dept. of CSE, NMAMIT Nitte"
       }
     },
@@ -143,7 +146,7 @@ export const PORTFOLIO_DATA = {
       quote: "Collegiate esports is more than just tournaments; it's creating an institutional platform where talent finds its arena.",
       coreFocus: [
         "Founder of AFTER HOURS — Collegiate Esports Club, NMAMIT Nitte",
-        "Building Institutional Esports Infrastructure",
+        "Built Official Web Platform (afterhoursnmamit.vercel.app)",
         "Recruitment, Selection & Cross-Functional Team Leadership",
         "End-to-End Campus Tournament Planning & Live Operations",
         "PC and Mobile Gaming Community Incubation",
@@ -162,72 +165,75 @@ export const PORTFOLIO_DATA = {
 
   projects: [
     {
-      id: "sign-language",
+      id: "after-hours",
       number: "001",
-      title: "AI-BASED SIGN LANGUAGE RECOGNITION SYSTEM",
-      subtitle: "CNN Translation & Gesture Classification for Kannada",
-      category: "AI & ML",
-      description: "A Kannada-focused sign language recognition and translation project using Convolutional Neural Networks.",
-      longDescription: "Developed an assistive deep learning model designed to bridge communication barriers by translating Kannada sign language gestures into textual and understandable format using Convolutional Neural Networks (CNNs). Explored custom feature extraction, preprocessing of spatial coordinate images, and multi-class classification.",
-      technologies: ["Python", "CNN", "Machine Learning", "OpenCV", "TensorFlow / Keras"],
+      title: "AFTER HOURS — COLLEGIATE ESPORTS PLATFORM",
+      subtitle: "Scroll-Driven Video Experience & Collegiate Esports Operations",
+      category: "CREATIVE TECH",
+      description: "The official web platform and digital headquarters for AFTER HOURS, the premier collegiate esports club at NMAMIT Nitte, featuring scroll-driven video scrubbing and roster management.",
+      longDescription: "Architected and engineered the official digital headquarters for AFTER HOURS Collegiate Esports Club at NMAMIT Nitte. Built with a production-grade cinematic scroll experience utilizing frame-accurate video scrubbing, dynamic stage HUD overlays, real-time tournament scheduling, and collegiate player roster management.",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Video Scrubbing", "Vercel"],
       metrics: [
-        "Specialized Kannada Language Gesture Set",
-        "Multi-layer CNN Feature Extraction",
-        "Real-Time Image Preprocessing Pipeline"
+        "Smooth 60fps Keyframe-Optimized Video Scrubbing",
+        "Collegiate Roster & Tournament Bracket Architecture",
+        "Live Stage Progression HUD (Corridor → Arena Reveal)"
       ],
-      githubUrl: "https://github.com/Simsayed/Kannada-sign-language-translation.git",
-      isPlaceholderVisual: true,
-      visualType: "cnn-diagram",
+      githubUrl: "https://github.com/Arshsayed05/AFTER-HOURS",
+      liveUrl: "https://afterhoursnmamit.vercel.app",
+      isPlaceholderVisual: false,
+      visualType: "esports-hud",
       keyHighlights: [
-        "Trained on region-specific regional sign datasets",
-        "Optimized CNN architecture for fast spatial inference",
-        "Designed to assist non-verbal regional communication"
+        "Engineered scroll-scrubbed intra-frame video playback synchronized with scroll distance",
+        "Dynamic roster showcase covering PC and mobile competitive squads",
+        "Production-deployed on Vercel at afterhoursnmamit.vercel.app"
       ]
     },
     {
-      id: "fake-news",
+      id: "arsh-portfolio",
       number: "002",
-      title: "FAKE NEWS CLASSIFICATION",
-      subtitle: "NLP & Supervised Machine Learning Verification",
-      category: "AI & ML",
-      description: "A machine learning project focused on classifying potentially misleading or fake news.",
-      longDescription: "Engineered an intelligent text classification model utilizing natural language processing techniques and supervised machine learning algorithms to detect anomalies, factual inconsistency markers, and linguistic cues indicative of fake news reports across diverse media articles.",
-      technologies: ["Machine Learning", "Python", "Data Analysis", "NLP", "Scikit-Learn"],
+      title: "ARSH. — SWISS BRUTALIST DIGITAL IDENTITY",
+      subtitle: "Experimental Typographic Portfolio with Interactive CLI & Web Audio",
+      category: "CREATIVE TECH",
+      description: "An experimental personal portfolio combining Swiss International Typographic Style, modern brutalist design, interactive 3D kinetic geometry, and an operational CLI shell.",
+      longDescription: "Conceptualized and engineered a non-template personal portfolio for Arsh Kasim Sayed. Features mathematical 12-column Swiss modular grids, synthesized Web Audio tactile feedback, an interactive real-time terminal shell with custom commands, dynamic coordinate tracking cursor, and live Indian Standard Time synchronization.",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Web Audio API", "Canvas 2D", "Vercel"],
       metrics: [
-        "Corpus Tokenization & Vectorization",
-        "Supervised Binary & Multiclass Classification",
-        "Confusion Matrix Precision-Recall Optimization"
+        "100% Client-Synthesized Mechanical Click Audio",
+        "Interactive Terminal Shell with Command Parser",
+        "Kinetic 3D Geometric Vector Projection Canvas"
       ],
-      githubUrl: "https://github.com/Simsayed", // Profile fallback
-      isPlaceholderVisual: true,
-      visualType: "nlp-matrix",
+      githubUrl: "https://github.com/Arshsayed05/Portfolio",
+      liveUrl: "https://arshsayeddev.vercel.app",
+      isPlaceholderVisual: false,
+      visualType: "terminal-matrix",
       keyHighlights: [
-        "Text preprocessing: TF-IDF vectorization, stopword removal, stemming",
-        "Benchmarked multiple ML classifiers for accuracy and generalization",
-        "Explored lexical feature importance for misleading claim detection"
+        "Lightweight Canvas 2D isometric wireframe engine with zero heavy 3D library overhead",
+        "Interactive easter egg terminal accessible via hotkey (~) or navigation bar",
+        "Disciplined typographic hierarchy based on Swiss graphic design principles"
       ]
     },
     {
-      id: "student-performance",
+      id: "python-socket-chat",
       number: "003",
-      title: "STUDENT PERFORMANCE ANALYSIS",
-      subtitle: "Exploratory Data Analysis & Predictive Academic Modeling",
-      category: "DATA ANALYSIS",
-      description: "A data-oriented project focused on exploring student performance and identifying relevant patterns.",
-      longDescription: "Conducted extensive exploratory data analysis (EDA) and predictive modeling on multi-dimensional academic datasets to discover correlation patterns between study habits, socio-demographic indicators, attendance rates, and examination outcomes.",
-      technologies: ["Python", "Data Analysis", "Pandas", "Matplotlib", "Seaborn"],
+      title: "PYTHON MULTI-CLIENT SOCKET CHAT SYSTEM",
+      subtitle: "Low-Level TCP/IP Network Communication & Concurrency",
+      category: "SOFTWARE SYSTEMS",
+      description: "A concurrent multi-client messaging system engineered with Python socket programming and low-level TCP/IP network protocols.",
+      longDescription: "Engineered a low-level socket communication suite in Python enabling real-time bidirectional message distribution between multiple concurrent clients and a centralized server. Implemented multi-threading for handling asynchronous socket connections, packet serialization, connection handshakes, and graceful disconnect fallbacks.",
+      technologies: ["Python", "Socket Programming", "TCP/IP", "Multi-threading", "Network Protocols"],
       metrics: [
-        "Multi-variable Correlation Matrices",
-        "Feature Importance Distribution",
-        "Interactive Visual Data Insights"
+        "Multi-Threaded Concurrent Client Handlers",
+        "Full-Duplex TCP Socket Streams",
+        "Custom Protocol Packet Framing & Broadcast"
       ],
-      githubUrl: "https://github.com/Simsayed", // Profile fallback
-      isPlaceholderVisual: true,
-      visualType: "data-distribution",
+      githubUrl: "https://github.com/Arshsayed05/Arsh-s-website",
+      liveUrl: undefined,
+      isPlaceholderVisual: false,
+      visualType: "socket-network",
       keyHighlights: [
-        "Comprehensive statistical hypothesis testing and bivariate distributions",
-        "Identified key lagging indicators impacting academic performance",
-        "Rendered clear graphical insights for institutional interventions"
+        "Utilized Python socket library for raw TCP transport layer management",
+        "Threaded server listener to distribute messages across active client sessions without latency",
+        "Robust exception handling for abrupt socket termination and connection pooling"
       ]
     }
   ] as Project[],
@@ -293,12 +299,12 @@ export const PORTFOLIO_DATA = {
       id: "t-after-hours",
       year: "COMMUNITY",
       badge: "FOUNDER",
-      title: "Founded AFTER HOURS Collegiate Esports Club",
+      title: "Founded AFTER HOURS & Built Web Platform",
       organization: "NMAMIT Nitte",
-      description: "Founded the premier collegiate esports club at NMAM Institute of Technology to give student gamers an institutional platform.",
+      description: "Founded the premier collegiate esports club at NMAM Institute of Technology and engineered its official web platform.",
       details: [
         "Built team structure covering PC and mobile competitive titles",
-        "Established transparent talent recruitment and selection protocols",
+        "Engineered the official scroll-driven website (afterhoursnmamit.vercel.app)",
         "Orchestrated campus-wide esports events, tournaments, and community gatherings"
       ],
       category: "community"
@@ -309,11 +315,11 @@ export const PORTFOLIO_DATA = {
       badge: "HORIZON",
       title: "Engineering, Building & Scaling",
       organization: "Academic & Tech Pursuits",
-      description: "Continuing to develop technical depth in Computer Science, deploy AI/ML projects, and foster thriving creative ecosystems.",
+      description: "Continuing to develop technical depth in Computer Science, deploy full-stack and creative web projects, and foster thriving digital ecosystems.",
       details: [
-        "Deepening computer science knowledge in algorithms, ML, and software architecture",
+        "Deepening computer science knowledge in algorithms, software systems, and web architectures",
         "Building innovative creative-technology and full-stack projects",
-        "Ready for impactful internships and collaborative engineering ventures"
+        "Open for impactful software engineering internships and collaborative ventures"
       ],
       category: "technical"
     }
@@ -325,22 +331,22 @@ export const PORTFOLIO_DATA = {
       categoryCode: "01 // CODE",
       description: "Core languages used for algorithmic problem solving, backend systems, and application architecture.",
       skills: [
-        { name: "Python", level: "Core", focus: "Data Analysis, ML Pipelines, Automation, Scripting" },
+        { name: "Python", level: "Core", focus: "Socket Programming, Scripting, Automation, Backend Logic" },
         { name: "Java", level: "Proficient", focus: "Object-Oriented Programming, Data Structures, Systems" },
-        { name: "JavaScript", level: "Proficient", focus: "Modern ES6+, Web Interfaces, Async Architectures" },
+        { name: "JavaScript / TypeScript", level: "Proficient", focus: "Modern ES6+, React, Async Architectures, Typing" },
         { name: "SQL", level: "Competent", focus: "Relational Queries, Schema Design, Data Manipulation" },
       ]
     },
     {
       category: "TECHNOLOGY",
       categoryCode: "02 // TECH",
-      description: "Frameworks, artificial intelligence architectures, databases, and development tooling.",
+      description: "Modern frameworks, networking protocols, development tooling, and cloud deployment platforms.",
       skills: [
-        { name: "Machine Learning", level: "Applied", focus: "Supervised Learning, Model Evaluation, Scikit-Learn" },
-        { name: "CNN (Deep Learning)", level: "Applied", focus: "Convolutional Networks, Computer Vision, Image Classification" },
-        { name: "MongoDB", level: "Familiar", focus: "Document Store, NoSQL Collections, CRUD Integration" },
-        { name: "Data Analysis", level: "Applied", focus: "Pandas, NumPy, Statistical Distributions, Matplotlib" },
-        { name: "Web Development", level: "Applied", focus: "React, TypeScript, Tailwind CSS, Responsive Design" },
+        { name: "React & Vite", level: "Applied", focus: "Component Architecture, Hooks, State Management, Fast Builds" },
+        { name: "Tailwind CSS", level: "Applied", focus: "Design Systems, Swiss Brutalist Layouts, Responsive UI" },
+        { name: "Socket Programming", level: "Applied", focus: "TCP/IP, Network Handshakes, Multi-Threaded Streaming" },
+        { name: "Web Audio API", level: "Applied", focus: "Synthesized UI Soundscapes, Real-Time Audio Feedback" },
+        { name: "Git & Vercel", level: "Applied", focus: "Version Control, Continuous Deployment, Edge Hosting" },
       ]
     },
     {
@@ -409,14 +415,14 @@ export const PORTFOLIO_DATA = {
       notes: "Founded and established the institutional collegiate esports organization for campus gamers."
     },
     {
-      id: "ai-academic",
+      id: "after-hours-platform",
       index: "05",
-      title: "Developer of AI Academic Projects",
-      entity: "Dept. of Computer Science & Engineering",
-      type: "Technical Innovation",
-      year: "NMAMIT",
+      title: "Architect of AFTER HOURS Web Platform",
+      entity: "afterhoursnmamit.vercel.app",
+      type: "Web Engineering",
+      year: "2026",
       verified: true,
-      notes: "Engineered deep learning solutions including Kannada Sign Language recognition using CNNs."
+      notes: "Engineered and deployed the official scroll-driven video platform and digital headquarters for AFTER HOURS."
     }
   ] as AchievementItem[],
 };

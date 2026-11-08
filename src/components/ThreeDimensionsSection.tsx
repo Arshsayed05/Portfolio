@@ -180,31 +180,31 @@ export const ThreeDimensionsSection: React.FC = () => {
 
                 {/* Mock Code / Architectural Box */}
                 <div className="bg-ink text-background p-4 font-mono text-xs space-y-2 border border-ink overflow-x-auto">
-                  <div className="text-acid-lime font-bold"># Machine Learning Pipeline Model</div>
-                  <div className="text-gray-400">class ConvolutionalVisionPipeline:</div>
-                  <div className="pl-4 text-gray-300">def __init__(self, dataset=&apos;KannadaSign&apos;):</div>
-                  <div className="pl-8 text-gray-400">self.architecture = &apos;Custom CNN&apos;</div>
-                  <div className="pl-8 text-gray-400">self.objective = &apos;Translational Equity&apos;</div>
-                  <div className="pl-4 text-gray-300">def forward(self, x):</div>
-                  <div className="pl-8 text-acid-lime">return self.classify_spatial_gesture(x)</div>
+                  <div className="text-acid-lime font-bold"># Python Concurrent Socket & Web Architecture</div>
+                  <div className="text-gray-400">class FullStackNetworkEngine:</div>
+                  <div className="pl-4 text-gray-300">def __init__(self, host=&apos;0.0.0.0&apos;, port=8080):</div>
+                  <div className="pl-8 text-gray-400">self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</div>
+                  <div className="pl-8 text-gray-400">self.frontend = &apos;React + TypeScript + Tailwind&apos;</div>
+                  <div className="pl-4 text-gray-300">def deploy_ecosystem(self):</div>
+                  <div className="pl-8 text-acid-lime">return self.bind_and_serve_threads()</div>
                 </div>
 
                 {/* Specification Grid */}
                 <div className="grid grid-cols-2 gap-3 font-mono text-xs">
                   <div className="border border-ink p-3 bg-background">
                     <span className="text-ink-muted text-[10px] uppercase">PRIMARY LANGUAGES</span>
-                    <p className="font-bold text-ink mt-1">Python, Java, JavaScript, SQL</p>
+                    <p className="font-bold text-ink mt-1">Python, Java, JavaScript, TypeScript, SQL</p>
                   </div>
                   <div className="border border-ink p-3 bg-background">
                     <span className="text-ink-muted text-[10px] uppercase">ARCHITECTURES</span>
-                    <p className="font-bold text-ink mt-1">CNN, Neural Nets, REST, NoSQL</p>
+                    <p className="font-bold text-ink mt-1">TCP Sockets, React, REST, Modular UI</p>
                   </div>
                 </div>
 
                 <div className="p-3 bg-acid-lime/20 border border-ink font-mono text-xs text-ink flex items-start gap-2">
                   <Sparkles className="w-4 h-4 text-ink shrink-0 mt-0.5" />
                   <span>
-                    Focusing on practical AI tooling that solves regional language barriers and predictive data tasks.
+                    Focusing on interactive web experiences, low-level network communication, and collegiate community platforms.
                   </span>
                 </div>
               </div>

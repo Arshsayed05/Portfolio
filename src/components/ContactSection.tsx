@@ -253,7 +253,7 @@ export const ContactSection: React.FC = () => {
                 >
                   <div className="flex items-center gap-2.5 font-mono text-xs font-bold">
                     <Github className="w-4 h-4" />
-                    <span>GITHUB // Simsayed</span>
+                    <span>GITHUB // Arshsayed05</span>
                   </div>
                   <span className="font-mono text-xs text-acid-lime">↗</span>
                 </a>

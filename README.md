@@ -42,14 +42,14 @@
    - Oversized typographic pull-quote
    - Swiss crop-marked photographic portrait placeholder
 5. **The Three Dimensions:**
-   - **Dimension 01: The Engineer** (Computer Science, Python, Java, JS, CNN deep learning, full-stack)
+   - **Dimension 01: The Engineer** (Computer Science, Python, Java, JS, TypeScript, Socket Programming, full-stack web)
    - **Dimension 02: The Competitor** (BGMI competitive circuit since 2018/2020, XTREME PHOENIX squad ownership, verified LAN runner-up and Champions League runner-up)
    - **Dimension 03: The Builder** (AFTER HOURS collegiate esports club founder dossier, organizational leadership, campus tournaments)
 6. **Project Archive:**
-   - Project 001: AI-Based Sign Language Recognition System (Kannada CNN) with verified GitHub link
-   - Project 002: Fake News Classification (Machine Learning, NLP)
-   - Project 003: Student Performance Analysis (Data Analysis, EDA)
-   - Custom SVG technical schematics & detailed architecture modal
+   - Project 001: AFTER HOURS — Collegiate Esports Platform (React, TypeScript, Video Scrubbing, live at afterhoursnmamit.vercel.app)
+   - Project 002: ARSH. — Swiss Brutalist Personal Portfolio (React, TypeScript, Web Audio, CLI, live at arshsayeddev.vercel.app)
+   - Project 003: Python Multi-Client Socket Chat System (Python, Socket Programming, TCP/IP, Concurrency)
+   - Custom SVG technical schematics & detailed architecture modal with direct GitHub links
 7. **Experience Timeline:**
    - Editorial horizontal & vertical chronological track from 2018 to Present
    - Interactive click-to-focus milestone inspector

@@ -4,17 +4,16 @@ import { soundFx } from '../utils/sound';
 import { 
   ExternalLink, 
   Github, 
-  Layers, 
   ArrowUpRight, 
   Cpu, 
-  BarChart3, 
-  FileText,
-  X,
-  Code
+  Radio, 
+  Terminal,
+  Activity,
+  X
 } from 'lucide-react';
 
 export const ProjectsSection: React.FC = () => {
-  const [filter, setFilter] = useState<'ALL' | 'AI & ML' | 'DATA ANALYSIS'>('ALL');
+  const [filter, setFilter] = useState<'ALL' | 'CREATIVE TECH' | 'SOFTWARE SYSTEMS'>('ALL');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const projects = PORTFOLIO_DATA.projects;
@@ -22,7 +21,7 @@ export const ProjectsSection: React.FC = () => {
     ? projects 
     : projects.filter((p) => p.category === filter);
 
-  const handleFilter = (cat: 'ALL' | 'AI & ML' | 'DATA ANALYSIS') => {
+  const handleFilter = (cat: 'ALL' | 'CREATIVE TECH' | 'SOFTWARE SYSTEMS') => {
     soundFx.click(600);
     setFilter(cat);
   };
@@ -47,10 +46,10 @@ export const ProjectsSection: React.FC = () => {
             <span className="font-mono text-xs bg-ink text-background px-2 py-0.5 font-bold">
               03 // ARCHIVE
             </span>
-            <span className="font-mono text-xs text-ink-muted">SELECTED ENGINEERING PROJECTS</span>
+            <span className="font-mono text-xs text-ink-muted">AUTHENTIC REPOSITORY ARCHIVE</span>
           </div>
           <div className="font-mono text-xs text-ink-muted">
-            CODE REPOSITORY // GITHUB VERIFIED
+            GITHUB // Arshsayed05
           </div>
         </div>
 
@@ -67,7 +66,7 @@ export const ProjectsSection: React.FC = () => {
 
           {/* Category Filter Chips */}
           <div className="flex flex-wrap gap-2 font-mono text-xs shrink-0">
-            {(['ALL', 'AI & ML', 'DATA ANALYSIS'] as const).map((cat) => (
+            {(['ALL', 'CREATIVE TECH', 'SOFTWARE SYSTEMS'] as const).map((cat) => (
               <button
                 key={cat}
                 onClick={() => handleFilter(cat)}
@@ -105,7 +104,7 @@ export const ProjectsSection: React.FC = () => {
                       {project.category}
                     </span>
                     <span className="text-ink-muted hidden sm:inline">
-                      ARCHIVE_ID // 0{project.number}
+                      REPO // {project.id}
                     </span>
                   </div>
 
@@ -169,6 +168,20 @@ export const ProjectsSection: React.FC = () => {
                       <ArrowUpRight className="w-4 h-4" />
                     </button>
 
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        data-cursor="LIVE"
+                        onClick={() => soundFx.click()}
+                        className="px-5 py-2.5 bg-acid-lime text-ink hover:bg-ink hover:text-background border-2 border-ink font-mono text-xs font-bold uppercase transition-all shadow-brutalist flex items-center gap-2"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        <span>LIVE PREVIEW ↗</span>
+                      </a>
+                    )}
+
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
@@ -198,7 +211,7 @@ export const ProjectsSection: React.FC = () => {
                         <Cpu className="w-3.5 h-3.5 text-ink" /> SCHEMATIC // FIG 0{project.number}.1
                       </span>
                       <span className="bg-ink text-background px-1.5 py-0.5">
-                        {project.isPlaceholderVisual ? 'CUSTOM VISUAL ARCHITECTURE' : 'RENDER'}
+                        AUTHENTIC CODEBASE
                       </span>
                     </div>
 
@@ -206,120 +219,122 @@ export const ProjectsSection: React.FC = () => {
                     <div className="aspect-[16/10] bg-surface border border-ink flex items-center justify-center p-4 relative overflow-hidden">
                       <div className="absolute inset-0 opacity-20 swiss-grid-bg" />
 
-                      {/* Visual Diagram 001: CNN Sign Language Translation */}
-                      {project.visualType === 'cnn-diagram' && (
+                      {/* Visual Diagram 001: AFTER-HOURS Scroll Scrub Video & Tournament Hub */}
+                      {project.visualType === 'esports-hud' && (
                         <div className="relative z-10 w-full h-full flex flex-col justify-between font-mono text-[11px]">
                           <div className="flex justify-between text-[10px] text-ink-muted">
-                            <span>INPUT: KANNADA SIGN GESTURE</span>
-                            <span className="text-acid-lime bg-ink px-1">CONV2D + RELU</span>
+                            <span className="font-bold flex items-center gap-1">
+                              <Radio className="w-3 h-3 text-red-500 animate-pulse" />
+                              INTRA-FRAME SCRUB // 60 FPS
+                            </span>
+                            <span className="text-ink bg-acid-lime px-1 font-bold">STAGE 03 / ARENA</span>
                           </div>
                           
-                          <div className="flex items-center justify-around my-auto">
-                            {/* Input Layer */}
-                            <div className="flex flex-col items-center">
-                              <div className="w-12 h-16 border-2 border-ink bg-background flex flex-col justify-between p-1">
-                                <div className="text-[8px] text-ink-muted font-bold">RAW</div>
-                                <div className="w-6 h-6 border border-dashed border-acid-lime mx-auto animate-pulse"></div>
-                                <div className="text-[8px] text-center">64x64</div>
-                              </div>
-                              <span className="text-[9px] mt-1 font-bold">IMAGE</span>
+                          {/* Timeline Scrub Wireframe */}
+                          <div className="my-auto space-y-2 w-full px-2">
+                            <div className="flex justify-between text-[9px] text-ink-muted font-mono">
+                              <span>00:00 CORRIDOR</span>
+                              <span className="text-acid-lime bg-ink px-1 font-bold">CURRENT: THRESHOLD</span>
+                              <span>01:30 HQ UNLOCKED</span>
                             </div>
 
-                            <span className="text-xs font-bold">→</span>
-
-                            {/* Conv Feature Maps */}
-                            <div className="flex flex-col items-center">
-                              <div className="flex -space-x-3">
-                                <div className="w-10 h-14 border border-ink bg-surface shadow"></div>
-                                <div className="w-10 h-14 border border-ink bg-surface-subtle shadow"></div>
-                                <div className="w-10 h-14 border-2 border-ink bg-acid-lime/30 shadow flex items-center justify-center">
-                                  <span className="text-[9px] font-bold">CNN</span>
-                                </div>
-                              </div>
-                              <span className="text-[9px] mt-1 font-bold">FEATURE MAPS</span>
+                            <div className="w-full h-4 bg-background border-2 border-ink flex items-center p-0.5 relative">
+                              <div className="h-full bg-ink w-[65%]" />
+                              <div className="absolute left-[65%] top-[-4px] bottom-[-4px] w-2 bg-acid-lime border border-ink shadow" />
                             </div>
 
-                            <span className="text-xs font-bold">→</span>
-
-                            {/* Output Prediction */}
-                            <div className="flex flex-col items-center">
-                              <div className="w-14 h-16 border-2 border-ink bg-ink text-background p-1 flex flex-col justify-between">
-                                <span className="text-[8px] text-acid-lime">OUTPUT</span>
-                                <span className="text-[10px] font-bold text-center text-white">ಕ / KHA</span>
-                                <span className="text-[7px] text-gray-400">P = 0.98</span>
-                              </div>
-                              <span className="text-[9px] mt-1 font-bold">GESTURE</span>
+                            <div className="grid grid-cols-3 gap-1 pt-1 text-[8px] text-center font-mono">
+                              <div className="border border-ink p-1 bg-background font-bold">ROSTER: BGMI</div>
+                              <div className="border border-ink p-1 bg-acid-lime font-bold text-ink">ROSTER: PC</div>
+                              <div className="border border-ink p-1 bg-background font-bold">EVENTS HUB</div>
                             </div>
                           </div>
 
                           <div className="text-[9px] text-ink-muted text-center border-t border-ink/10 pt-1">
-                            NEURAL INFERENCE PIPELINE // SPATIAL MATRIX TRANSLATOR
+                            AFTER HOURS DIGITAL ARCHITECTURE // NMAMIT NITTE
                           </div>
                         </div>
                       )}
 
-                      {/* Visual Diagram 002: Fake News Classification */}
-                      {project.visualType === 'nlp-matrix' && (
+                      {/* Visual Diagram 002: ARSH Portfolio Swiss Brutalist Architecture */}
+                      {project.visualType === 'terminal-matrix' && (
                         <div className="relative z-10 w-full h-full flex flex-col justify-between font-mono text-[11px]">
                           <div className="flex justify-between text-[10px] text-ink-muted">
-                            <span>CORPUS TOKENIZATION</span>
-                            <span className="bg-ink text-white px-1">TF-IDF MATRIX</span>
+                            <span className="font-bold flex items-center gap-1">
+                              <Terminal className="w-3 h-3 text-acid-lime" />
+                              CLI ENGINE // PARSER
+                            </span>
+                            <span className="bg-ink text-white px-1">WEB AUDIO: 880Hz</span>
                           </div>
 
-                          <div className="grid grid-cols-4 gap-1.5 my-auto">
-                            {['TOK_01', 'TOK_02', 'VEC_03', 'SCORE', 'TRUE', 'ANOMALY', 'TF-IDF', '0.94'].map((cell, idx) => (
-                              <div
-                                key={idx}
-                                className={`p-1.5 text-center text-[9px] font-bold border border-ink ${
-                                  idx === 5 ? 'bg-acid-lime text-ink' : idx === 4 ? 'bg-ink text-background' : 'bg-background text-ink'
-                                }`}
-                              >
-                                {cell}
-                              </div>
-                            ))}
+                          <div className="grid grid-cols-3 gap-2 my-auto px-2 w-full">
+                            <div className="border border-ink p-2 bg-ink text-background text-[9px] font-mono space-y-1">
+                              <div className="text-acid-lime font-bold">INPUT CMD</div>
+                              <div>$ esports</div>
+                              <div className="text-gray-400">STATUS: OK</div>
+                            </div>
+                            <div className="border border-ink p-2 bg-background text-[9px] font-mono space-y-1">
+                              <div className="text-ink font-bold">SWISS GRID</div>
+                              <div>12-COL RATIO</div>
+                              <div className="text-ink-muted">1:1.618</div>
+                            </div>
+                            <div className="border border-ink p-2 bg-acid-lime text-ink text-[9px] font-mono space-y-1">
+                              <div className="font-bold">AUDIO SYNTH</div>
+                              <div>OSC: TRIANGLE</div>
+                              <div>TICK: 20ms</div>
+                            </div>
                           </div>
 
                           <div className="text-[9px] text-ink-muted text-center border-t border-ink/10 pt-1">
-                            PROBABILISTIC CLASSIFIER // VERIFICATION BOUNDARY
+                            MODULAR BRUTALIST RUNTIME // ZERO BLOAT 2D/3D
                           </div>
                         </div>
                       )}
 
-                      {/* Visual Diagram 003: Student Performance Analysis */}
-                      {project.visualType === 'data-distribution' && (
+                      {/* Visual Diagram 003: Python Socket Chat Concurrency */}
+                      {project.visualType === 'socket-network' && (
                         <div className="relative z-10 w-full h-full flex flex-col justify-between font-mono text-[11px]">
                           <div className="flex justify-between text-[10px] text-ink-muted">
-                            <span>CORRELATION MATRIX</span>
-                            <span className="bg-acid-lime text-ink px-1 font-bold">R² = 0.87</span>
+                            <span className="font-bold flex items-center gap-1">
+                              <Activity className="w-3 h-3 text-ink" />
+                              TCP/IP STREAM PIPELINE
+                            </span>
+                            <span className="bg-acid-lime text-ink px-1 font-bold">SOCKET CONCURRENCY</span>
                           </div>
 
-                          {/* Data Bars */}
-                          <div className="flex items-end justify-between h-20 px-4 my-auto border-b-2 border-ink">
-                            {[35, 60, 45, 85, 70, 92, 55].map((h, i) => (
-                              <div key={i} className="flex flex-col items-center gap-1">
-                                <div
-                                  style={{ height: `${h}%` }}
-                                  className={`w-4 border border-ink ${
-                                    i === 5 ? 'bg-acid-lime' : i === 3 ? 'bg-ink' : 'bg-surface-subtle'
-                                  }`}
-                                />
-                                <span className="text-[8px] text-ink-muted">Q{i + 1}</span>
-                              </div>
-                            ))}
+                          {/* Client-Server Topology Diagram */}
+                          <div className="flex items-center justify-between px-3 my-auto w-full">
+                            <div className="space-y-1 text-center">
+                              <div className="w-14 p-1 border border-ink bg-background text-[8px] font-bold">CLIENT_01</div>
+                              <div className="w-14 p-1 border border-ink bg-background text-[8px] font-bold">CLIENT_02</div>
+                              <div className="w-14 p-1 border border-ink bg-background text-[8px] font-bold">CLIENT_N</div>
+                            </div>
+
+                            <div className="flex flex-col items-center text-[8px] font-bold text-ink-muted">
+                              <span>⇄ FULL DUPLEX ⇄</span>
+                              <span className="text-acid-lime bg-ink px-1 my-0.5">THREAD POOL</span>
+                              <span>⇄ BROADCAST ⇄</span>
+                            </div>
+
+                            <div className="w-20 p-2 border-2 border-ink bg-ink text-background text-center">
+                              <div className="text-[8px] text-acid-lime font-bold">SERVER</div>
+                              <div className="text-[9px] font-bold">PORT: 8080</div>
+                              <div className="text-[7px] text-gray-400">DAEMON_LOOP</div>
+                            </div>
                           </div>
 
                           <div className="text-[9px] text-ink-muted text-center border-t border-ink/10 pt-1">
-                            MULTIVARIATE EDA // PERFORMANCE DETERMINANTS
+                            MULTI-CLIENT ASYNC SOCKET DAEMON // PYTHON RAW TCP
                           </div>
                         </div>
                       )}
 
                     </div>
 
-                    {/* Visual Caption & Explicit Transparent Disclaimer */}
+                    {/* Visual Caption */}
                     <div className="mt-2 text-[10px] font-mono text-ink-muted flex items-center justify-between">
-                      <span>CUSTOM SCHEMATIC GRAPHIC</span>
-                      <span>STATUS: REPOSITORY DOCUMENTED</span>
+                      <span>VERIFIED ARSH REPOSITORY</span>
+                      <span>STATUS: GITHUB HOSTED</span>
                     </div>
 
                   </div>
@@ -360,7 +375,7 @@ export const ProjectsSection: React.FC = () => {
             {/* Long Description */}
             <div className="space-y-4">
               <div className="font-mono text-xs font-bold text-ink uppercase">
-                ARCHITECTURE OVERVIEW & RESEARCH GOAL
+                ARCHITECTURE OVERVIEW & IMPLEMENTATION GOAL
               </div>
               <p className="font-sans text-base text-ink leading-relaxed">
                 {selectedProject.longDescription}
@@ -399,9 +414,19 @@ export const ProjectsSection: React.FC = () => {
             {/* Bottom Actions */}
             <div className="border-t-2 border-ink pt-4 flex flex-wrap justify-between items-center gap-3">
               <div className="font-mono text-[11px] text-ink-muted">
-                CSE PROJECT ARCHIVE // NMAMIT
+                GITHUB: Arshsayed05 // NMAMIT NITTE
               </div>
               <div className="flex items-center gap-3">
+                {selectedProject.liveUrl && (
+                  <a
+                    href={selectedProject.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-4 py-2 bg-acid-lime text-ink hover:bg-ink hover:text-background font-mono text-xs font-bold border border-ink flex items-center gap-2 shadow-brutalist"
+                  >
+                    <ExternalLink className="w-4 h-4" /> VISIT LIVE SITE
+                  </a>
+                )}
                 {selectedProject.githubUrl && (
                   <a
                     href={selectedProject.githubUrl}
@@ -409,7 +434,7 @@ export const ProjectsSection: React.FC = () => {
                     rel="noreferrer"
                     className="px-4 py-2 bg-ink text-background hover:bg-acid-lime hover:text-ink font-mono text-xs font-bold border border-ink flex items-center gap-2 shadow-brutalist"
                   >
-                    <Github className="w-4 h-4" /> VISIT REPOSITORY
+                    <Github className="w-4 h-4" /> REPOSITORY
                   </a>
                 )}
                 <button
